@@ -17,12 +17,14 @@ import FancyCard from './Components/FancyCard';
 import React from 'react';
 import Flatcard from './Components/FlatCard';
 import ScrollCard from './Components/ScrollCard';
+import ActionCard from './Components/Action';
 
 function App() {
   return (
     <>
     <ScrollCard/>
     <Flatcard/>
+    <ActionCard/>
     <FancyCard/>
      
      </>
