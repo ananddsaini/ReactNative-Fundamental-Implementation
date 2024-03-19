@@ -8,7 +8,7 @@ function ActionCard() {
   
 
   return (
-    <View style={styles.actionCardView}>
+    <View >
       <Text style={styles.headingText}>Action Card Preview</Text>
       <View>
         <Text style={[styles.cardParagraph, styles.cardElevated]}>
@@ -56,6 +56,8 @@ const styles = StyleSheet.create({
 },
 cardImageContainer:{textAlign:'center'},
   bodyContainerText:{},
-  bodyContainerTouchableOpacity:{}
+  bodyContainerTouchableOpacity:{
+    
+  }
 });
 export default ActionCard;
