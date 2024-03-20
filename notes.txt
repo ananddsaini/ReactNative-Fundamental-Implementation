@@ -1,0 +1,7 @@
+
+
+*** there is no <form /> element in React Native).
+
+<TextInput value={values.passwordLength}  // the given input text is password passwordLength
+                                          //we assign 
+           onChangeText={handleChange('passwordLength');}  // what we to keep track of when text change
