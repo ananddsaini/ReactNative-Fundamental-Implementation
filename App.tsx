@@ -18,20 +18,17 @@ import React from 'react';
 import Flatcard from './Components/FlatCard';
 import ScrollCard from './Components/ScrollCard';
 import ActionCard from './Components/Action';
-import PasswordGenerator from './Components/PasswordGenrator';
+//import PasswordGenerator from './Components/PasswordGenrator';
+import CopyPassgen from './Components/copyPassgen';
 
 function App() {
   return (
-    <ScrollView keyboardShouldPersistTaps='handled'>
     
-    <ScrollCard/>
-    <Flatcard/>
-    <ActionCard/>
-
-    <FancyCard/>
-    <PasswordGenerator/>
+    
+    
+    <CopyPassgen/>
      
-     </ScrollView>
+    
      
 )}
 export default App;

@@ -31,10 +31,10 @@ function ActionCard() {
         ge, and going through the cites of the word 
         </Text>
 
-        <TouchableOpacity style={styles.bodyContainerTouchableOpacity}
+        <TouchableOpacity 
         onPress={()=>{ openWebsite('https://github.com/ananddsaini')  }}
         
-        ><Text>Click here for Github Profile</Text></TouchableOpacity>
+        ><Text style={styles.bodyContainerTouchableOpacityText} >Click here for Github Profile</Text></TouchableOpacity>
         
               
 
@@ -54,10 +54,14 @@ const styles = StyleSheet.create({
     borderRadius:60,
     overflow: 'hidden',
 },
-cardImageContainer:{textAlign:'center'},
+cardImageContainer:{textAlign:'center',
+
+},
   bodyContainerText:{},
-  bodyContainerTouchableOpacity:{
-    
+  bodyContainerTouchableOpacityText:{
+    fontSize:15,
+    fontWeight:'bold',
+color:'blue',
   }
 });
 export default ActionCard;
