@@ -3,11 +3,12 @@ import { View,Text,TextInput, StyleSheet, TouchableOpacity, ScrollView, } from "
 import auth from '@react-native-firebase/auth';
 
 
-const UserAuthentication=()=>{
+ const UserAuthentication=()=>{
 const [email,setEmail]=useState('');
 const [password,setPassword]=useState('');
 
-const createUser=()=>{
+ const  createUser=()=>{
+    console.log(password);
     auth()
   .createUserWithEmailAndPassword(email, password)
   .then(() => {
@@ -27,7 +28,7 @@ const createUser=()=>{
 }
 
 return (
-    <ScrollView keyboardShouldPersistTaps='always'>
+    <ScrollView >
      <View>
         <TextInput  
         value={email}
@@ -37,7 +38,10 @@ return (
         <TextInput  
         value={password}
         style={styles.emailInput}  
-        onChangeText={(value)=>{setPassword(value)}} />
+        onChangeText={(value)=>{setPassword(value)}}
+        placeholder="Enter Password"
+        />
+        
             <TouchableOpacity onPress={()=>{createUser()} }>
                 <Text style={styles.createAccountButton}>Create Account </Text>
             
@@ -54,18 +58,25 @@ return (
 
 
 }
+export default UserAuthentication;
 
 const styles= StyleSheet.create({
 
 emailInput:{ height:40,
 width: 160,
 borderRadius:15,
+backgroundColor:'#f08080',
+padding:10,
+margin:10,
 
 },
 createAccountButton:{
-height: 20,
+height: 40,
 width: 100,
-fontWeight:'bold'
+fontWeight:'bold',
+backgroundColor:'#f08080',
+padding:10,
+margin:10,
 
 }
 
